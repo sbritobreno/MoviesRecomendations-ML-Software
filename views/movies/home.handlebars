@@ -1,0 +1,38 @@
+<div class="home-header">
+    {{#if search}}
+        <h1>Which movie are you looking for?: <span>{{search}}</span></h1>
+        {{#if moviesQty}}
+            <p><span>{{moviesQty}}</span> movies were found.</p>
+        {{else}}
+            <p>No movie was found for the search <span>{{search}}</span></p>
+        {{/if}}
+    {{else}}
+        <h1>Discover some of our <span>Movies</span></h1>
+    {{/if}}
+    <form action="/" method="get">
+        <input type="text" name="search" placeholder="Which movie are you looking for?">
+        <input type="submit" class="btn" value="Search">
+    </form>
+    <div class="order-container">
+        <span>Order by:</span>
+        <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="new">
+            <button type="submit"><i class="bi bi-arrow-up"></i></button>
+        </form>
+        <form action="/" method="get">
+            <input type="hidden" name="search" value="{{this.search}}">
+            <input type="hidden" name="order" value="old">
+            <button type="submit"><i class="bi bi-arrow-down"></i></button>
+        </form>
+        <a href="/">Clear</a>
+    </div>
+</div>
+<div class="movies-container">
+    {{#each movies}}
+        <figure>
+            <blockquote>"{{this.Movie}}"</blockquote>
+            <figcaption>por <span>{{this.User.name}}</span></figcaption>
+        </figure>
+    {{/each}}
+</div>

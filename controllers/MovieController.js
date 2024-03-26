@@ -1,16 +1,14 @@
 const req = require('express/lib/request')
-// const Movies = require('../models/Movies')
-const User = require('../models/User')
+const { getAllMovies } = require("../models/Movie");
 
 
 module.exports = class MoviesController{
-    
     static async showRecomendedMovies(req, res){
-
+        
     }
-
+    
     static async showMovies(req, res){
-
+        const movies = getAllMovies()
         let search = ''
 
 

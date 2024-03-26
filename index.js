@@ -3,19 +3,18 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const flash = require("express-flash");
+// Models
+const { loadMoviesData } = require("./models/Movie");
+const { loadUserData } = require("./models/User");
 
 const app = express();
 
-// Models
-//const Movie = require("./models/Movie");
-//const User = require("./models/User");
-
 // Import Routes
-//const moviesRoutes = require("./routes/moviesRoutes");
+const moviesRoutes = require("./routes/moviesRoutes");
 const authRoutes = require("./routes/authRoutes");
 
 // Import Controllers
-//const movieController = require("./controllers/movieController");
+const movieController = require("./controllers/MovieController");
 
 // template engine
 app.engine("handlebars", exphbs.engine());
@@ -62,11 +61,18 @@ app.use((req, res, next) => {
 });
 
 // Routes
-//app.use("/thoughts", thoughtsRoutes);
+app.use("/movies", moviesRoutes);
 app.use("/", authRoutes);
 
-//app.get("/", thoughtController.showThoughts);
+app.get("/", movieController.showMovies);
 
-app.listen(3000, () => {
-  console.log("App is running on port 3000");
-});
+async function startServer() {
+  await loadMoviesData();
+  await loadUserData();
+
+  app.listen(3000, () => {
+    console.log("App is running on port 3000");
+  });
+}
+
+startServer();
