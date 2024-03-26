@@ -12,7 +12,7 @@ const app = express();
 
 // Import Routes
 //const moviesRoutes = require("./routes/moviesRoutes");
-//const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 // Import Controllers
 //const movieController = require("./controllers/movieController");
