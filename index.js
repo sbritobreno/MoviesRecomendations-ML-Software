@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 //app.use("/thoughts", thoughtsRoutes);
 app.use("/", authRoutes);
 
-app.get("/", thoughtController.showThoughts);
+//app.get("/", thoughtController.showThoughts);
 
 app.listen(3000, () => {
   console.log("App is running on port 3000");
