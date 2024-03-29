@@ -1,8 +1,8 @@
 <div class="home-header">
   {{#if search}}
     <h1>Which movie are you looking for?: <span>{{search}}</span></h1>
-    {{#if moviesQty}}
-      <p><span>{{moviesQty}}</span> movies were found.</p>
+    {{#if movieQty}}
+      <p><span>{{movieQty}}</span> movies were found.</p>
     {{else}}
       <p>No movie was found for the search <span>{{search}}</span></p>
     {{/if}}
@@ -18,28 +18,60 @@
     <input type="submit" class="btn" value="Search" />
   </form>
   <div class="order-container">
-    <span>Order by:</span>
+    <span>Order by Rate:</span>
     <form action="/" method="get">
       <input type="hidden" name="search" value="{{this.search}}" />
-      <input type="hidden" name="order" value="new" />
+      <input type="hidden" name="rate" value="good" />
       <button type="submit"><i class="bi bi-arrow-up"></i></button>
     </form>
     <form action="/" method="get">
       <input type="hidden" name="search" value="{{this.search}}" />
-      <input type="hidden" name="order" value="old" />
+      <input type="hidden" name="rate" value="bad" />
       <button type="submit"><i class="bi bi-arrow-down"></i></button>
+    </form>
+    <span>Order by Year:</span>
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}" />
+      <input type="hidden" name="year" value="new" />
+      <button type="submit"><i class="bi bi-arrow-up"></i></button>
+    </form>
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}" />
+      <input type="hidden" name="year" value="old" />
+      <button type="submit"><i class="bi bi-arrow-down"></i></button>
+    </form>
+    <span>Filter by Genre:</span>
+    <form id="genreFilterForm" action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}" />
+      <select id="genreSelect" name="genre">
+        <option value="All">All</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Crime">Crime</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Animation">Animation</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Musical">Musical</option>
+        <option value="Biography">Biography</option>
+        <option value="Romance">Romance</option>
+        <option value="Documentary">Documentary</option>
+      </select>
     </form>
     <a href="/">Clear</a>
   </div>
 </div>
 <div class="movies-container">
-  {{#each movies}}
+  {{#each moviesData}}
     <div>
       <figure>
         <div class="movieImg">
           <img src="/img/logo.png" alt="MovieImg" />
         </div>
-        <div style="height: 50%;">
+        <div style="height: 55%;">
           <blockquote>"{{this.Movie}}"</blockquote>
           <p>LeadStudio: <span>{{this.LeadStudio}}</span></p>
           <p>Rate: <span>{{this.AudienceScore}}</span></p>
@@ -47,11 +79,17 @@
           <p>Year: <span>{{this.Year}}</span></p>
         </div>
         <div style="margin-top: .5em;">
-          <form action="/" method="post">
-            <button><i class="btnn bi bi-play"></i></button>
+          <form action="/" method="get">
+            <input type="hidden" name="search" value="{{../search}}">
+            <input type="hidden" name="movieToBeWatched" value="{{this.Movie}}" />
+            <button type="submit"><i class="btnn bi bi-play"></i></button>
           </form>
         </div>
       </figure>
     </div>
   {{/each}}
 </div>
+<script>
+  document.getElementById("genreSelect").addEventListener("change", function() {
+  document.getElementById("genreFilterForm").submit(); });
+</script>

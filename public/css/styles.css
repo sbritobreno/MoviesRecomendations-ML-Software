@@ -305,7 +305,7 @@ button {
 
 .movies-container blockquote {
   font-style: italic;
-  font-size: calc(8px + (40 - 4) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(6px + (40 - 4) * ((100vw - 320px) / (1920 - 320)));
   margin-bottom: 0.3em;
 }
 

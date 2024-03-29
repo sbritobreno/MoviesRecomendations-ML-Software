@@ -21,7 +21,9 @@ function loadMoviesData() {
         reject(err);
       })
       .on("end", () => {
-        console.log(`${movies.length} movies found!, ${console.log(movies[1])}`);
+        console.log(
+          `${movies.length} movies found!, ${console.log(movies[1])}`
+        );
         resolve();
       });
   });
