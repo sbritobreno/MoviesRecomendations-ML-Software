@@ -1,0 +1,28 @@
+<div class="home-header">
+  <h1>Recommended especially for <span>You</span></h1>
+</div>
+<div class="movies-container">
+  {{#each moviesData}}
+    <div>
+      <figure>
+        <div class="movieImg">
+          <img src="/img/logo.png" alt="MovieImg" />
+        </div>
+        <div style="height: 55%;">
+          <blockquote>"#{{addOne @index}} {{this.Movie}}"</blockquote>
+          <p>LeadStudio: <span>{{this.LeadStudio}}</span></p>
+          <p>Rate: <span>{{this.AudienceScore}}</span></p>
+          <p>Genre: <span>{{this.Genre}}</span></p>
+          <p>Year: <span>{{this.Year}}</span></p>
+        </div>
+        <div style="margin-top: .5em;">
+          <form action="/" method="get">
+            <input type="hidden" name="search" value="{{../search}}">
+            <input type="hidden" name="movieToBeWatched" value="{{this.Movie}}" />
+            <button type="submit"><i class="btnn bi bi-play"></i></button>
+          </form>
+        </div>
+      </figure>
+    </div>
+  {{/each}}
+</div>

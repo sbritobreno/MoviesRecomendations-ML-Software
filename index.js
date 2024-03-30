@@ -3,9 +3,17 @@ const exphbs = require("express-handlebars");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const flash = require("express-flash");
+const Handlebars = require("handlebars");
 // Models
 const { loadMoviesData } = require("./models/Movie");
 const { loadUserData } = require("./models/User");
+
+// Register the custom Handlebars helper
+Handlebars.registerHelper("addOne", function (value) {
+  return value + 1;
+});
+
+const checkAuth = require("./helpers/auth").checkAuth;
 
 const app = express();
 
@@ -62,9 +70,9 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/movies", moviesRoutes);
-app.use("/", authRoutes);
+app.use("/auth", authRoutes);
 
-app.get("/", movieController.showMovies);
+app.get("/", checkAuth, movieController.showMovies);
 
 async function startServer() {
   await loadMoviesData();

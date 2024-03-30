@@ -2,7 +2,12 @@ const req = require("express/lib/request");
 const { getAllMovies } = require("../models/Movie");
 
 module.exports = class MoviesController {
-  static async showRecomendedMovies(req, res) {}
+  static async showRecomendedMovies(req, res) {
+    const movies = getAllMovies();
+    const moviesData = movies.slice(0, 10);
+
+    res.render("movies/foryou", { moviesData });
+  }
 
   static async showMovies(req, res) {
     const movies = getAllMovies();
