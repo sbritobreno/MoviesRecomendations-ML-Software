@@ -31,7 +31,14 @@ function getAllUsers() {
   return users;
 }
 
+function getUser(id) {
+  // Find user
+  const user = users.find((user) => user.Id == id);
+  return user;
+}
+
 module.exports = {
   loadUserData,
   getAllUsers,
+  getUser,
 };

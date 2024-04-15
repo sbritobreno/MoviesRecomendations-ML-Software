@@ -1,5 +1,24 @@
 <div class="home-header">
   <h1>Recommended especially for <span>You</span></h1>
+  <div class="order-container">
+    <span>Upcoming Movies:</span>
+    <form action="/submit-movies" method="POST">
+      <input type="checkbox" id="upcomingMovies" name="upcomingMovies" />
+    </form>
+    <span>How are you feeling?:</span>
+    <form id="moodFilterForm" action="/" method="get">
+      <input type="hidden" name="mood" value="{{this.user.Mood}}" />
+      <select id="moodSelect" name="mood">
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Angry">Angry</option>
+        <option value="Excited">Excited</option>
+        <option value="Anxious">Anxious</option>
+        <option value="Relaxed">Relaxed</option>
+        <option value="Grateful">Grateful</option>
+      </select>
+    </form>
+  </div>
 </div>
 <div class="movies-container">
   {{#each moviesData}}
@@ -16,9 +35,12 @@
           <p>Year: <span>{{this.Year}}</span></p>
         </div>
         <div style="margin-top: .5em;">
-          <form action="/" method="get">
-            <input type="hidden" name="search" value="{{../search}}">
-            <input type="hidden" name="movieToBeWatched" value="{{this.Movie}}" />
+          <form action="/movies/watch/{{this.Movie}}" method="post">
+            <input
+              type="hidden"
+              name="movieToBeWatched"
+              value="{{this.Movie}}"
+            />
             <button type="submit"><i class="btnn bi bi-play"></i></button>
           </form>
         </div>
@@ -26,3 +48,9 @@
     </div>
   {{/each}}
 </div>
+<script>
+  document.getElementById("moodSelect").addEventListener("change", function() {
+  document.getElementById("moodFilterForm").submit(); });
+  document.getElementById('upcomingMovies').addEventListener('change',
+  function() { if (this.checked) { } else { } });
+</script>

@@ -6,5 +6,6 @@ const checkAuth = require("../helpers/auth").checkAuth;
 
 router.get("/", checkAuth, MovieController.showMovies);
 router.get("/foryou", checkAuth, MovieController.showRecomendedMovies);
+router.post("/watch/:movie", checkAuth, MovieController.WatchMovie);
 
 module.exports = router;

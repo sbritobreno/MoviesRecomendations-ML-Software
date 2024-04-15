@@ -1,3 +1,3 @@
-Id,Name,Username,Password
-1,Breno Brito,BBrito,1234
-2,Jefferson Lima,JeffL,1234
+Id,Name,Username,Password,Mood
+1,Breno Brito,BBrito,1234,Happy
+2,Jefferson Lima,JeffL,1234,Sad

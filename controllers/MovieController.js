@@ -1,12 +1,14 @@
 const req = require("express/lib/request");
 const { getAllMovies } = require("../models/Movie");
+const { getUser } = require("../models/User");
 
 module.exports = class MoviesController {
   static async showRecomendedMovies(req, res) {
+    const user = getUser(req.session.userid);
     const movies = getAllMovies();
     const moviesData = movies.slice(0, 10);
 
-    res.render("movies/foryou", { moviesData });
+    res.render("movies/foryou", { moviesData, user });
   }
 
   static async showMovies(req, res) {
@@ -22,11 +24,6 @@ module.exports = class MoviesController {
           movie.Movie.toLowerCase().includes(search.toLowerCase())
         )
       : movies;
-
-    if (req.query.movieToBeWatched) {
-      req.flash("message", "A new link was opened with the Movie :)");
-      watchMovie(req.query.movieToBeWatched);
-    }
 
     // Order by rate
     if (req.query.rate === "good") {
@@ -65,10 +62,17 @@ module.exports = class MoviesController {
       movieQty = false;
     }
 
-    async function watchMovie(movieName) {
-      console.log(movieName);
-    }
-
     res.render("movies/home", { moviesData, search, movieQty });
+  }
+
+  static async WatchMovie(req, res) {
+    const movie = req.params.movie;
+    console.log(movie);
+
+    req.flash("message", "A new link was opened with the Movie :)");
+
+    req.session.save(() => {
+      res.redirect("/");
+    });
   }
 };
