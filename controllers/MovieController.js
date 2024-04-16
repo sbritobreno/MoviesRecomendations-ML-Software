@@ -81,13 +81,17 @@ module.exports = class MoviesController {
 
   static async WatchMovie(req, res) {
     const movieId = req.params.movie;
+    const userId = req.session.userid;
     const movies = getAllMovies();
+    const user = getUser(userId);
     const movie = movies.find((el) => el.Id === movieId);
 
     if (movie.Year == 2025) {
       req.flash("message", "This Movie was not released yet!");
     } else {
-      updateUserData(movieId);
+      if (user && !user.MoviesWatched.includes(movieId * 1)) {
+        await updateUserData(userId, movie);
+      }
       req.flash("message", "A new link was opened with the Movie :)");
     }
 
@@ -97,7 +101,34 @@ module.exports = class MoviesController {
   }
 };
 
-async function updateUserData(movieId) {}
+async function updateUserData(userId, movie) {
+  try {
+    const data = await fs.promises.readFile(
+      path.join(__dirname, "..", "data", "users.json"),
+      "utf8"
+    );
+    console.log(movie);
+    const users = JSON.parse(data);
+    const updatedUsers = users.map((user) => {
+      if (user.Id == userId) {
+        user[movie.Genre]++;
+        user.TotalMoviesWatched++;
+        user.AverageYear = Math.floor((user.AverageYear + movie.Year * 1) / 2);
+        user.AverageRate = Math.floor(
+          (user.AverageRate + movie.AudienceScore * 1) / 2
+        );
+        user.MoviesWatched.push(movie.Id * 1);
+      }
+      return user;
+    });
+    await fs.promises.writeFile(
+      path.join(__dirname, "..", "data", "users.json"),
+      JSON.stringify(updatedUsers, null, 2)
+    );
+  } catch (error) {
+    throw error;
+  }
+}
 
 async function updateUserMood(userId, newMood) {
   try {
@@ -120,6 +151,6 @@ async function updateUserMood(userId, newMood) {
     const updatedUser = updatedUsers.find((user) => user.Id === userId);
     return updatedUser;
   } catch (error) {
-    throw error; 
+    throw error;
   }
 }

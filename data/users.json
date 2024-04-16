@@ -19,19 +19,9 @@
     "Romance": 0,
     "Documentary": 0,
     "TotalMoviesWatched": 9,
-    "AverageYear": 7.3,
-    "AverageRate": 67.1,
-    "MoviesWatched": [
-      1,
-      3,
-      4,
-      10,
-      16,
-      122,
-      136,
-      149,
-      38
-    ]
+    "AverageYear": 2008,
+    "AverageRate": 67,
+    "MoviesWatched": [1, 3, 4, 10, 16, 122, 136, 149, 38]
   },
   {
     "Id": 2,
