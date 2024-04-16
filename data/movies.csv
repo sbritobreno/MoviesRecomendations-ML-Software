@@ -41,24 +41,24 @@ Stomp the Yard,Independent,83,Musical,2007,39
 Surf's Up,Sony,64,Animation,2007,40
 Halloween,Weinstein,64,Horror,2007,41
 Tyler Perry's Why Did I get Married,Independent,47,Romance,2007,42
-TMNT,,63,Action,2007,43
+TMNT,Universal,63,Action,2007,43
 P.S. I Love You,Independent,82,Romance,2007,44
 3:10 to Yuma,Lionsgate,85,Adventure,2007,45
 Sweeney Todd: The Demon Barber of Fleet Street,Warner Bros,81,Musical,2007,46
 Music and Lyrics,Warner Bros,70,Romance,2007,47
 Michael Clayton,Independent,72,Thriller,2007,48
 Premonition,Sony,55,Drama,2007,49
-The Kingdom,,78,Action,2007,50
+The Kingdom,Universal,78,Action,2007,50
 Shooter,Paramount,82,Action,2007,51
 License to Wed,Warner Bros,55,Comedy,2007,52
-No Reservations,,64,Comedy,2007,53
+No Reservations,Universal,64,Comedy,2007,53
 Alien vs. Predator -- Requiem,Fox,37,Horror,2007,54
 There Will Be Blood,Paramount,84,Drama,2007,55
 Epic Movie,Independent,38,Comedy,2007,56
 Hitman,Fox,61,Action,2007,57
 30 Days of Night,Independent,57,Horror,2007,58
 Stardust,Paramount,86,Adventure,2007,59
-The Brave One,,65,Action,2007,60
+The Brave One,Universal,65,Action,2007,60
 The Heartbreak Kid,Paramount,41,Comedy,2007,61
 Smokin' Aces,Universal,64,Action,2007,62
 Good Luck Chuck,Lionsgate,61,Comedy,2007,63
@@ -69,7 +69,7 @@ Mr. Brooks,MGM,75,Thriller,2007,67
 The Nanny Diaries,Weinstein,52,Comedy,2007,68
 Nancy Drew,Independent,61,Thriller,2007,69
 The Mist,Weinstein,64,Horror,2007,70
-The Reaping,,53,Horror,2007,71
+The Reaping,Universal,53,Horror,2007,71
 Grindhouse,Weinstein,86,Action,2007,72
 Sicko,Weinstein,87,Documentary,2007,73
 Across the Universe,Independent,84,Romance,2007,74
@@ -89,7 +89,7 @@ Shoot 'Em Up,Warner Bros,66,Action,2007,87
 The Darjeeling Limited,Fox,79,Drama,2007,88
 In the Land of Women,Warner Bros,72,Comedy,2007,89
 Dragon Wars (aka D-War),Mediaplex,44,Action,2007,90
-Pathfinder: Legend of the Ghost Warrior,,41,Action,2007,91
+Pathfinder: Legend of the Ghost Warrior,Universal,41,Action,2007,91
 The Dark Knight,Warner Bros,96,Thriller,2008,92
 Iron Man,Paramount,91,Action,2008,93
 Indiana Jones and the Kingdom of the Crystal Skull,Paramount,59,Action,2008,94
@@ -132,7 +132,7 @@ The Curious Case of Benjamin Button,Warner Bros,81,Fantasy,2008,130
 27 Dresses,Fox,71,Comedy,2008,131
 Hellboy II: The Golden Army,Universal,70,Action,2008,132
 The Day the Earth Stood Still,Fox,34,Thriller,2008,133
-Vantage Point,Sony,61,,2008,134
+Vantage Point,Sony,61,Adventure,2008,134
 The Spiderwick Chronicles,Paramount,67,Fantasy,2008,135
 Fool's Gold,Warner Bros,53,Adventure,2008,136
 Role Models,Universal,75,Comedy,2008,137
@@ -151,7 +151,7 @@ Nim's Island,Independent,50,Adventure,2008,149
 Australia,Fox,69,Adventure,2008,150
 Made of Honor,Sony,61,Comedy,2008,151
 College Road Trip,Buena Vista,56,Adventure,2008,152
-The Sisterhood of the Traveling Pants 2,Warner Bros,67,,2008,153
+The Sisterhood of the Traveling Pants 2,Warner Bros,67,Comedy,2008,153
 Speed Racer,Warner Bros,61,Action,2008,154
 Prom Night,Independent,46,Horror,2008,155
 Rambo,Lionsgate,70,Action,2008,156
@@ -216,8 +216,8 @@ The Haunting of Molly Hartley,Independent,22,Horror,2008,214
 Ghost Town,Paramount,60,Comedy,2008,215
 Religulous,Lionsgate,78,Documentary,2008,216
 Rachel Getting Married,Independent,61,Drama,2008,217
-The Pirates Who Don't Do Anything,Universal,,,2008,218
-Under the Same Moon,Weinstein,37,,2008,219
+The Pirates Who Don't Do Anything,Universal,65,Animation,2008,218
+Under the Same Moon,Weinstein,37,Drama,2008,219
 Miss Pettigrew Lives for a Day,Independent,70,Comedy,2008,220
 Soul Men,Weinstein,42,Comedy,2008,221
 Meet Dave,Fox,42,Adventure,2008,222
@@ -236,7 +236,7 @@ Punisher: War Zone,Lionsgate,47,Action,2008,234
 Miracle at St. Anna,Disney,68,Action,2008,235
 City of Ember,Independent,48,Adventure,2008,236
 In Bruges,Focus,85,Crime,2008,237
-Expelled: No Intelligence Allowed,,42,Documentary,2008,238
+Expelled: No Intelligence Allowed,Universal,42,Documentary,2008,238
 Over Her Dead Body,New Line,47,Comedy,2008,239
 Avatar,Fox,92,Action,2009,240
 Transformers: Revenge of the Fallen,Paramount,76,Action,2009,241
@@ -444,7 +444,7 @@ My Soul to Take,Relativity Media,29,Horror,2010,442
 Nanny McPhee Returns,Universal,54,Comedy,2010,443
 Never Let Me Go,Independent,70,Drama,2010,444
 Our Family Wedding,Independent,49,Comedy,2010,445
-Paranormal Activity 2,Paramount,,Horror,2010,446
+Paranormal Activity 2,Paramount,65,Horror,2010,446
 Percy Jackson & the Olympians: The Lightning Thief,Fox,57,Action,2010,447
 Piranha 3-D,Weinstein,45,Comedy,2010,448
 Please Give,Sony,62,Comedy,2010,449
@@ -507,7 +507,7 @@ Vampires Suck,Independent,32,Comedy,2010,505
 Wall Street: Money Never Sleeps,Independent,43,Drama,2010,506
 When in Rome,Disney,44,Comedy,2010,507
 Why Did I Get Married Too?,Lionsgate,67,Comedy,2010,508
-Yogi Bear,,36,Comedy,2010,509
+Yogi Bear,Universal,36,Comedy,2010,509
 You Again,Independent,45,Comedy,2010,510
 You Will Meet a Tall Dark Stranger,Independent,35,Comedy,2010,511
 Youth in Revolt,Weinstein,52,Comedy,2010,512
@@ -521,7 +521,7 @@ Another Earth,Independent,74,Fantasy,2011,519
 Apollo 18,Weinstein,31,Horror,2011,520
 Arthur,Warner Bros,49,Comedy,2011,521
 Arthur Christmas,Aardman Animations,82,Animation,2011,522
-Average,,62,,2011,523
+Average,Universal,62,Drama,2011,523
 Bad Teacher,Independent,38,Comedy,2011,524
 Battle: Los Angeles,Relativity Media,50,Action,2011,525
 Beastly,CBS,50,Romance,2011,526
@@ -600,7 +600,7 @@ Season Of The Witch,Relativity Media,32,Action,2011,598
 Shame,Independent,80,Drama,2011,599
 Shark Night 3D,Relativity Media,25,Horror,2011,600
 Sherlock Holmes 2,Warner Bros,79,Action,2011,601
-Something Borrowed,Independent,,Romance,2011,602
+Something Borrowed,Independent,65,Romance,2011,602
 Soul Surfer,Sony,79,Drama,2011,603
 Source Code,Summit,81,Thriller,2011,604
 Spy Kids: All The Time in the World,Weinstein,40,Action,2011,605
@@ -652,340 +652,24 @@ Winnie The Pooh,Disney,79,Animation,2011,650
 X-Men: First Class,Disney,88,Action,2011,651
 Your Highness,Universal,36,Comedy,2011,652
 Zookeeper,Happy Madison,42,Comedy,2011,653
-21 Jump Street,Sony,82,,2012,654
-A Late Quartet,Entertainment One,,Drama,2012,655
-A Royal Affair,Magnolia,,,2012,656
-Abraham Lincoln: Vampire Hunter,Fox,51,,2012,657
-Agneepath,Eros,,,2012,658
-Albert Nobbs,Roadside Attractions,,Drama,2012,659
-American Reunion,Universal,63,,2012,660
-Amour,Sony,,Drama,2012,661
-Anna Karenina,Focus,51,,2012,662
-Arbitrage,Roadside Attractions,63,,2012,663
-Argo,Warner Bros,90,,2012,664
-Atlas Shrugged: Part II,Atlas Distribution,,Drama,2012,665
-Barfi!,UTV,,Comedy,2012,666
-Battleship,Universal,55,,2012,667
-Beasts of the Southern Wild,Fox Searchlight,76,,2012,668
-Big Miracle,Universal,64,,2012,669
-Brave,Buena Vista,76,,2012,670
-Bully (PG-13),Weinstein,,,2012,671
-Casa De Mi Padre,Lionsgate,,,2012,672
-Celeste and Jesse Forever,Sony,,,2012,673
-Chasing Mavericks,Fox,,,2012,674
-Chernobyl Diaries,Warner Bros,29,,2012,675
-Chronicle (2012),Fox,71,,2012,676
-Cloud Atlas,Warner Bros,67,,2012,677
-Contraband,Universal,58,,2012,678
-Crooked Arrows,Fox,,Drama,2012,679
-Dabangg 2,Eros,,,2012,680
-Dark Shadows,Warner Bros,46,,2012,681
-Diary of a Wimpy Kid: Dog Days,Fox,64,,2012,682
-Django Unchained,Weinstein,92,,2012,683
-Dr. Seuss' The Lorax,Universal,64,,2012,684
-Dredd,Lionsgate,72,,2012,685
-Ek Tha Tiger,Yash Raj,,Action,2012,686
-End of Watch,Open Road,86,,2012,687
-English Vinglish,Eros,,,2012,688
-Farewell My Queen,Cohen Media,,Drama,2012,689
-Flight,Paramount,75,,2012,690
-Footnote,Sony,,,2012,691
-For Greater Glory,ARC Entertainment,,Drama,2012,692
-Frankenweenie,Buena Vista,70,Animation,2012,693
-Friends with Kids,Roadside Attractions,,,2012,694
-Ghost Rider: Spirit of Vengeance,Sony,32,,2012,695
-Girl in Progress,Lionsgate,,,2012,696
-Goon,Magnolia,,,2012,697
-Haywire,Relativity Media,40,Action,2012,698
-Hitchcock,Fox Searchlight,,,2012,699
-Hope Springs,Sony,56,,2012,700
-Hotel Transylvania,Sony,72,,2012,701
-House at the End of The Street,Relativity Media,42,,2012,702
-Housefull 2,Eros,,,2012,703
-Hyde Park on Hudson,Focus,,,2012,704
-Hysteria,Sony,,,2012,705
-Ice Age: Continental Drift,Fox,63,,2012,706
-Jab Tak Hai Jaan,Yash Raj,,,2012,707
-Jack Reacher,Paramount,67,,2012,708
-Jeff Who Lives at Home,Paramount,,Comedy,2012,709
-Jiro Dreams of Sushi,Magnolia,,,2012,710
-John Carter,Buena Vista,60,,2012,711
-Journey 2: The Mysterious Island,Warner Bros,60,,2012,712
-Katy Perry: Part of Me,Paramount,73,,2012,713
-Kid With a Bike,IFC,,,2012,714
-Killer Joe,LD Entertainment,,Drama,2012,715
-Killing Them Softly,Weinstein,44,,2012,716
-Last Ounce of Courage,Rocky Mountain,,Drama,2012,717
-Lawless,Weinstein,75,,2012,718
-Les Miserables (2012),Universal,79,,2012,719
-Life of Pi,Fox,85,,2012,720
-Lincoln,Buena Vista,81,,2012,721
-Looper,TriStar,82,,2012,722
-Madagascar 3: Europe's Most Wanted,DreamWorks,73,Animation,2012,723
-Magic Mike,Warner Bros,61,,2012,724
-Man on a Ledge,Summit,52,Action,2012,725
-Marley,Magnolia,,,2012,726
-Marvel's The Avengers,Buena Vista,91,,2012,727
-MIB 3,Sony,71,,2012,728
-Mirror Mirror,Relativity Media,45,,2012,729
-Monsieur Lazhar (U.S.-only),Music Box Films,,Drama,2012,730
-Moonrise Kingdom,Focus,86,,2012,731
-Nitro Circus the Movie 3D,ARC Entertainment,,Documentary,2012,732
-October Baby (2012),Samuel Goldwyn,,Drama,2012,733
-Paranormal Activity 4,Paramount,36,Horror,2012,734
-ParaNorman,Focus,72,,2012,735
-Parental Guidance,Fox,61,,2012,736
-Pitch Perfect,Universal,83,,2012,737
-Premium Rush,Sony,60,,2012,738
-Prometheus,Fox,69,,2012,739
-Promised Land (2012),Focus,,,2012,740
-Raiders of the Lost Ark (IMAX),Paramount,,,2012,741
-Red Dawn (2012),FilmDistrict,52,Action,2012,742
-Red Tails,Fox,58,,2012,743
-Resident Evil: Retribution,Screen Gems,51,Action,2012,744
-Rise of the Guardians,DreamWorks,81,,2012,745
-Robot & Frank,Samuel Goldwyn,,Comedy,2012,746
-Rock of Ages,Warner Bros,55,Musical,2012,747
-Ruby Sparks,Fox Searchlight,,Comedy,2012,748
-Rust and Bone,Sony,,,2012,749
-Safe (2012),Lionsgate,60,,2012,750
-Safe House,Universal,64,,2012,751
-Safety Not Guaranteed,FilmDistrict,,,2012,752
-Salmon Fishing in the Yemen,CBS,64,,2012,753
-Samsara,Oscillloscope,,Documentary,2012,754
-Savages (2012),Universal,55,,2012,755
-Searching for Sugar Man,Sony,,,2012,756
-Seeking a Friend for the End of the World,Focus,,,2012,757
-Seven Psychopaths,CBS,71,,2012,758
-Silver Linings Playbook,Weinstein,86,,2012,759
-Singin' In the Rain (2012 re-release),Warner Bros,,,2012,760
-Sinister,Summit,61,Horror,2012,761
-Skyfall,Sony,86,,2012,762
-Sleepwalk with Me,IFC,,Comedy,2012,763
-Snow White and the Huntsman,Universal,52,,2012,764
-Sparkle (2012),TriStar,65,,2012,765
-Step Up Revolution,Summit,69,Romance,2012,766
-Taken 2,Fox,54,,2012,767
-Talaash,Reliance,,Drama,2012,768
-Ted,Universal,74,,2012,769
-That's My Boy,Sony,53,,2012,770
-The Amazing Spider-Man,Sony,77,,2012,771
-The Apparition,Warner Bros,,,2012,772
-The Best Exotic Marigold Hotel,Fox Searchlight,79,,2012,773
-The Bourne Legacy,Universal,58,,2012,774
-The Cabin in the Woods,Lionsgate,73,Horror,2012,775
-The Campaign,Warner Bros,51,,2012,776
-The Cold Light of Day,Summit,,,2012,777
-The Collection,LD Entertainment,,,2012,778
-The Dark Knight Rises,Warner Bros,90,,2012,779
-The Devil Inside,Paramount,22,,2012,780
-The Dictator,Paramount,45,,2012,781
-The Expendables 2,Lionsgate,68,,2012,782
-The Five-Year Engagement,Universal,52,,2012,783
-The Grey,Open Road,61,,2012,784
-The Guilt Trip,Paramount,40,,2012,785
-The Hobbit: An Unexpected Journey,Warner Bros,83,,2012,786
-The Hunger Games,Lionsgate,81,,2012,787
-The Impossible,Summit,85,,2012,788
-The Lucky One,Warner Bros,68,,2012,789
-The Master,Weinstein,59,,2012,790
-The Perks of Being a Wallflower,Summit,89,,2012,791
-The Pirates! Band of Misfits,Sony,60,,2012,792
-The Possession,Lionsgate,49,,2012,793
-The Queen of Versailles,Magnolia,,,2012,794
-The Raid: Redemption,Sony,,,2012,795
-The Sessions,Fox Searchlight,,,2012,796
-The Three Stooges,Fox,49,,2012,797
-The Twilight Saga: Breaking Dawn Part 2,Summit,71,,2012,798
-The Vow,Screen Gems,63,,2012,799
-The Watch,Fox,40,,2012,800
-The Woman in Black,CBS,55,,2012,801
-This Is 40,Universal,51,,2012,802
-Total Recall (2012),Sony,47,,2012,803
-Underworld Awakening,Screen Gems,62,,2012,804
-What to Expect When You're Expecting,Lionsgate,48,,2012,805
-Won't Back Down,Fox,,,2012,806
-Wrath of the Titans,Warner Bros,49,,2012,807
-Wreck-It Ralph,Buena Vista,87,,2012,808
-Your Sister's Sister,IFC,,,2012,809
-Zero Dark Thirty,Sony,80,,2012,810
-About Time,Universal,83,,2013,811
-The Fifth Estate,Buena Vista,40,,2013,812
-Parker,FilmDistrict,49,,2013,813
-The To-Do List,CBS,48,,2013,814
-Grown Ups 2,Sony,55,,2013,815
-After Earth,Sony,38,,2013,816
-Captain Phillips,Sony,92,,2013,817
-Escape Plan,Summit,59,,2013,818
-Prisoners,Warner Bros,88,,2013,819
-Stoker,Fox Searchlight,61,,2013,820
-Walking with Dinosaurs,Fox,41,,2013,821
-Love is All You Need,Sony,60,,2013,822
-The Kings of Summer,CBS,77,,2013,823
-Iron Man 3,Buena Vista,80,Action,2013,824
-Despicable Me 2,Universal,85,,2013,825
-THG: Catching Fire,Lionsgate,92,Action,2013,826
-The Desolation of Smaug,Warner Bros,85,,2013,827
-Frozen,Buena Vista,89,,2013,828
-Fast & Furious 6,Universal,84,Action,2013,829
-Monsters University,Buena Vista,83,,2013,830
-Gravity,Warner Bros,85,,2013,831
-Man of Steel,Warner Bros,76,Action,2013,832
-Thor: The Dark World,Buena Vista,83,,2013,833
-The Croods,Fox,79,,2013,834
-World War Z,Paramount,73,,2013,835
-Oz The Great & Powerful,Buena Vista,57,,2013,836
-Star Trek Into Darkness,Paramount,90,,2013,837
-The Wolverine,Fox,70,,2013,838
-Pacific Rim,Warner Bros,78,,2013,839
-G.I. Joe: Retaliation,Paramount,49,,2013,840
-The Hangover Part III,Warner Bros,45,,2013,841
-Now You See Me,Summit,71,Thriller,2013,842
-The Great Gatsby,Warner Bros,68,,2013,843
-The Smurfs 2,Sony,58,,2013,844
-The Conjuring,Warner Bros,83,Horror,2013,845
-A Good Day to Die Hard,Fox,42,,2013,846
-Oblivion,Universal,61,,2013,847
-Elysium,TriStar,60,,2013,848
-Turbo,Fox,67,,2013,849
-We're the Millers,Warner Bros,73,,2013,850
-Epic,Fox,66,,2013,851
-The Lone Ranger,Buena Vista,55,,2013,852
-Cloudy with a Chance of Meatballs 2,Sony,66,,2013,853
-The Heat,Fox,73,,2013,854
-Hansel & Gretel,Paramount,54,,2013,855
-Planes,Buena Vista,51,,2013,856
-White House Down,Sony,63,,2013,857
-Percy Jackson: Sea of Monsters,Fox,58,,2013,858
-Jack the Giant Slayer,Warner Bros,56,,2013,859
-The Wolf of Wall Street,Paramount,83,,2013,860
-Identity Thief,Universal,55,,2013,861
-The Secret Life of Walter Mitty,Fox,76,,2013,862
-Lee Daniels' The Butler,Weinstein,80,,2013,863
-Anchorman 2,Paramount,62,,2013,864
-American Hustle,Sony,79,,2013,865
-Insidious Chapter 2,FilmDistrict,60,,2013,866
-Olympus Has Fallen,FilmDistrict,68,,2013,867
-Bad Grandpa,Paramount,66,,2013,868
-Mama,Universal,57,,2013,869
-Red 2,Summit,64,,2013,870
-2 Guns,Universal,68,,2013,871
-12 years a slave,Fox Searchlight,92,Drama,2013,872
-This is the End,Sony,73,,2013,873
-47 Ronin,Universal,56,,2013,874
-Last Vegas,CBS,62,,2013,875
-Warm Bodies,Summit,74,,2013,876
-Ender's Game,Summit,72,,2013,877
-Gangster Squad,Warner Bros,59,,2013,878
-Riddick,Universal,56,,2013,879
-Evil Dead,TriStar,64,,2013,880
-42,Warner Bros,86,,2013,881
-Blue Jasmine,Sony,81,,2013,882
-Lone Survivor,Universal,,,2013,883
-The Internship,Fox,54,,2013,884
-Saving Mr. Banks,Buena Vista,89,,2013,885
-Free Birds,Relativity Media,47,Animation,2013,886
-The Mortal Instruments: City of Bones,Sony,61,Action,2013,887
-Rush,Universal,92,,2013,888
-The Purge,Universal,37,,2013,889
-Pain and Gain,Paramount,48,,2013,890
-Philomena,Weinstein,91,,2013,891
-Carrie,Sony,48,,2013,892
-Scary Movie 5,Weinstein,41,,2013,893
-R.I.P.D.,Universal,39,,2013,894
-The Best Man Holiday,Universal,90,,2013,895
-Safe Haven,Relativity Media,68,,2013,896
-The Counselor,Fox,25,,2013,897
-The Call,TriStar,66,,2013,898
-Side Effects,Open Road,71,,2013,899
-Runner Runner,Fox,34,,2013,900
-Beautiful Creatures,Warner Bros,34,,2013,901
-A Haunted House,Open Road,54,,2013,902
-Kick-Ass 2,Universal,62,,2013,903
-Quartet,Weinstein,65,,2013,904
-The Last Stand,Lionsgate,55,,2013,905
-The Host,Open Road,50,,2013,906
-The World's End,Focus,73,,2013,907
-21 and Over,Relativity Media,49,,2013,908
-Snitch,Summit,63,,2013,909
-Jobs,Open Road,85,,2013,910
-The Place Beyond the Pines,Focus,75,,2013,911
-August: Osage County,Weinstein,72,,2013,912
-Spring Breakers,A24,39,,2013,913
-Homefront,Open Road,66,,2013,914
-Delivery Man,Buena Vista,52,,2013,915
-Dallas Buyers Club,Focus,92,Drama,2013,916
-Don Jon,Relativity Media,64,,2013,917
-Her,Warner Bros,85,Drama,2013,918
-Movie 43,Relativity Media,25,,2013,919
-Grudge Match,Warner Bros,57,,2013,920
-Mandela: Long Walk to Freedom,Weinstein,73,,2013,921
-Dark Skies,Weinstein,50,,2013,922
-Enough Said,Fox Searchlight,78,,2013,923
-Trance,Fox Searchlight,64,,2013,924
-Inside Llewyn Davis,CBS,76,,2013,925
-The Way Way Back,Fox Searchlight,85,,2013,926
-Baggage Claim,Fox Searchlight,56,,2013,927
-The Big Wedding,Lionsgate,42,,2013,928
-The Sapphires,Weinstein,76,,2013,929
-Broken City,Fox,42,,2013,930
-The Bling Ring,A24,34,,2013,931
-Dead Man Down,FilmDistrict,48,,2013,932
-Admission,Focus,34,,2013,933
-Fruitvale Station,Weinstein,92,,2013,934
-Battle of the Year,Sony,52,,2013,935
-The Last Exorcism Part II,CBS,27,,2013,936
-Machete Kills,Open Road,39,,2013,937
-Paranoia,Relativity Media,,,2013,938
-I'm So Excited,Sony,38,,2013,939
-Nebraska,Paramount,86,,2013,940
-Out of the Furnace,Relativity Media,53,,2013,941
-Before Midnight,Sony,82,,2013,942
-Getaway,Warner Bros,36,,2013,943
-Bullet to the Head,Warner Bros,41,,2013,944
-Black Nativity,Fox Searchlight,57,,2013,945
-Blue Is the Warmest Color,IFC,87,,2013,946
-Unfinished Song,Weinstein,71,,2013,947
-The Spectacular Now,A24,,,2013,948
-All Is Lost,Roadside Attractions,66,,2013,949
-Closed Circuit,Focus,33,,2013,950
-The Company You Keep,Sony,45,,2013,951
-Oldboy,FilmDistrict,37,,2013,952
-Frances Ha,IFC,78,,2013,953
-Emperor,Roadside Attractions,47,,2013,954
-Stand Up Guys,Lionsgate,47,,2013,955
-In a World,Roadside Attractions,74,,2013,956
-The East,Fox Searchlight,66,,2013,957
-No,Sony,79,,2013,958
-Renoir,Samuel Goldwyn,57,,2013,959
-Austenland,Sony,60,,2013,960
-The Iceman,Millenium Entertainment,63,,2013,961
-Girl Most Likely,Roadside Attractions,35,,2013,962
-Wadjda,Sony,89,,2013,963
-Much Ado About Nothing,Roadside Attractions,78,,2013,964
-The Butler,Weinstein,79,,2013,965
-The Canyons,IFC,,,2013,966
-The Call,TriStar,66,,2013,967
-The English Teacher,Cinedigm Entertainment,,,2013,968
-John Dies at the End,Magnolia,53,,2013,969
-Lovelace,Radius-TWC,37,Biography,2013,970
-The Shadow of Destiny,Sony,70,Mystery,2025,971
-Midnight Reverie,Sony,70,Romance,2025,972
-Echoes of Eternity,Sony,70,Fantasy,2025,973
-Whispers in the Wind,Sony,70,Drama,2025,974
-Solitude's Embrace,Sony,70,Drama,2025,975
-Enigma of the Abyss,Sony,70,Mystery,2025,976
-Chronicles of the Lost,Sony,70,Adventure,2025,977
-Twilight Serenade,Sony,70,Romance,2025,978
-Secrets of the Moon,Sony,70,Mystery,2025,979
-Beyond the Horizon,Sony,70,Adventure,2025,980
-Mirage of Memories,Sony,70,Drama,2025,981
-Symphony of Shadows,Sony,70,Thriller,2025,982
-Veil of Illusions,Sony,70,Fantasy,2025,983
-Dance of the Stars,Sony,70,Musical,2025,984
-Serenity's Song,Sony,70,Drama,2025,985
-Echoes from the Past,Sony,70,Mystery,2025,986
-Twilight Mirage,Sony,70,Fantasy,2025,987
-Whispers of Fate,Sony,70,Drama,2025,988
-Enchanted Echo,Sony,70,Fantasy,2025,989
-Dawn's Embrace,Sony,70,Romance,2025,990
+Lovelace,Radius-TWC,37,Biography,2013,654
+The Shadow of Destiny,Sony,70,Mystery,2025,655
+Midnight Reverie,Paramount,70,Romance,2025,656
+Echoes of Eternity,Paramount,70,Fantasy,2025,657
+Whispers in the Wind,Sony,70,Drama,2025,658
+Solitude's Embrace,Sony,70,Drama,2025,659
+Enigma of the Abyss,Paramount,70,Mystery,2025,660
+Chronicles of the Lost,Sony,70,Adventure,2025,661
+Twilight Serenade,Sony,70,Romance,2025,662
+Secrets of the Moon,Fox,70,Mystery,2025,663
+Beyond the Horizon,Fox,70,Adventure,2025,664
+Mirage of Memories,Fox,70,Drama,2025,665
+Symphony of Shadows,Sony,70,Thriller,2025,666
+Veil of Illusions,Sony,70,Fantasy,2025,667
+Dance of the Stars,Sony,70,Musical,2025,668
+Serenity's Song,Universal,70,Drama,2025,669
+Echoes from the Past,Universal,70,Mystery,2025,670
+Twilight Mirage,Universal,70,Fantasy,2025,671
+Whispers of Fate,Sony,70,Drama,2025,672
+Enchanted Echo,Sony,70,Fantasy,2025,673
+Dawn's Embrace,Sony,70,Romance,2025,674

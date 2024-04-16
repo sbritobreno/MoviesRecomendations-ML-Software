@@ -6,9 +6,19 @@ module.exports = class MoviesController {
   static async showRecomendedMovies(req, res) {
     const user = getUser(req.session.userid);
     const movies = getAllMovies();
-    const moviesData = movies.slice(0, 10);
 
-    res.render("movies/foryou", { moviesData, user });
+    let upcomingMovies = false;
+    if (req.query.upcomingMovies) {
+      upcomingMovies = req.query.upcomingMovies;
+    }
+
+    const moviesData = upcomingMovies
+      ? movies.filter((m) => m.Year == 2025)
+      : movies.filter((m) => m.Year != 2025);
+
+    // call function to return the recommended movies from the ml_model
+
+    res.render("movies/foryou", { moviesData, user, upcomingMovies });
   }
 
   static async showMovies(req, res) {
@@ -66,13 +76,22 @@ module.exports = class MoviesController {
   }
 
   static async WatchMovie(req, res) {
-    const movie = req.params.movie;
+    const movieId = req.params.movie;
+    const movies = getAllMovies();
+    const movie = movies.find((el) => el.Id === movieId);
     console.log(movie);
 
-    req.flash("message", "A new link was opened with the Movie :)");
+    if (movie.Year == 2025) {
+      req.flash("message", "This Movie was not released yet!");
+    } else {
+      updateUserData(movieId);
+      req.flash("message", "A new link was opened with the Movie :)");
+    }
 
     req.session.save(() => {
       res.redirect("/");
     });
+
+    async function updateUserData(movieId) {}
   }
 };

@@ -2,8 +2,13 @@
   <h1>Recommended especially for <span>You</span></h1>
   <div class="order-container">
     <span>Upcoming Movies:</span>
-    <form action="/submit-movies" method="POST">
-      <input type="checkbox" id="upcomingMovies" name="upcomingMovies" />
+    <form id="upcomingMoviesForm" action="/movies/foryou" method="get">
+      <input
+        type="checkbox"
+        id="upcomingMovies"
+        name="upcomingMovies"
+        {{#if this.upcomingMovies}} checked {{/if}}
+      />
     </form>
     <span>How are you feeling?:</span>
     <form id="moodFilterForm" action="/" method="get">
@@ -35,12 +40,7 @@
           <p>Year: <span>{{this.Year}}</span></p>
         </div>
         <div style="margin-top: .5em;">
-          <form action="/movies/watch/{{this.Movie}}" method="post">
-            <input
-              type="hidden"
-              name="movieToBeWatched"
-              value="{{this.Movie}}"
-            />
+          <form action="/movies/watch/{{this.Id}}" method="post">
             <button type="submit"><i class="btnn bi bi-play"></i></button>
           </form>
         </div>
@@ -51,6 +51,6 @@
 <script>
   document.getElementById("moodSelect").addEventListener("change", function() {
   document.getElementById("moodFilterForm").submit(); });
-  document.getElementById('upcomingMovies').addEventListener('change',
-  function() { if (this.checked) { } else { } });
+  document.getElementById('upcomingMovies').addEventListener('change', function() {
+  document.getElementById("upcomingMoviesForm").submit(); });
 </script>
