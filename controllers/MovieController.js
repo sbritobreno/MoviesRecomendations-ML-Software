@@ -19,8 +19,8 @@ module.exports = class MoviesController {
     }
 
     const moviesData = upcomingMovies
-      ? movies.filter((m) => m.Year == 2025)
-      : movies.filter((m) => m.Year != 2025);
+      ? movies.filter((m) => m.Year == 2014)
+      : movies.filter((m) => m.Year != 2014);
 
     res.render("movies/foryou", { moviesData, user, upcomingMovies });
   }
@@ -86,7 +86,7 @@ module.exports = class MoviesController {
     const user = getUser(userId);
     const movie = movies.find((el) => el.Id === movieId);
 
-    if (movie.Year == 2025) {
+    if (movie.Year == 2014) {
       req.flash("message", "This Movie was not released yet!");
     } else {
       if (user && !user.MoviesWatched.includes(movieId * 1)) {
