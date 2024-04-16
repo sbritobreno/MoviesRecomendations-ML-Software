@@ -1,29 +1,23 @@
 const fs = require("fs");
 const path = require("path");
-const { parse } = require("csv-parse");
 
-const users = [];
+let users = [];
 
 function loadUserData() {
   return new Promise((resolve, reject) => {
-    fs.createReadStream(path.join(__dirname, "..", "data", "users.csv"))
-      .pipe(
-        parse({
-          comment: "#",
-          columns: true,
-        })
-      )
-      .on("data", (data) => {
-        users.push(data);
-      })
-      .on("error", (err) => {
-        console.log(err);
-        reject(err);
-      })
-      .on("end", () => {
-        console.log(`${users.length} users found!`);
+    fs.readFile(
+      path.join(__dirname, "..", "data", "users.json"),
+      "utf8",
+      (err, data) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        users = JSON.parse(data);
         resolve();
-      });
+      }
+    );
   });
 }
 
@@ -32,7 +26,6 @@ function getAllUsers() {
 }
 
 function getUser(id) {
-  // Find user
   const user = users.find((user) => user.Id == id);
   return user;
 }

@@ -13,6 +13,14 @@ Handlebars.registerHelper("addOne", function (value) {
   return value + 1;
 });
 
+Handlebars.registerHelper("compare", function (value1, value2, options) {
+  if (value1 === value2) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+});
+
 const checkAuth = require("./helpers/auth").checkAuth;
 
 const app = express();

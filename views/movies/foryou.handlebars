@@ -11,18 +11,19 @@
       />
     </form>
     <span>How are you feeling?:</span>
-    <form id="moodFilterForm" action="/" method="get">
-      <input type="hidden" name="mood" value="{{this.user.Mood}}" />
-      <select id="moodSelect" name="mood">
-        <option value="Happy">Happy</option>
-        <option value="Sad">Sad</option>
-        <option value="Angry">Angry</option>
-        <option value="Excited">Excited</option>
-        <option value="Anxious">Anxious</option>
-        <option value="Relaxed">Relaxed</option>
-        <option value="Grateful">Grateful</option>
-      </select>
-    </form>
+    {{!-- <form id="moodFilterForm" action="/movies/set_mood" method="post"> --}}
+    <form id="moodFilterForm" action="/movies/foryou" method="get">
+  <input type="hidden" name="mood" value="{{this.user.Mood}}" />
+ <select id="moodSelect" name="mood">
+  <option value="Happy" {{#compare this.user.Mood "Happy"}}selected{{/compare}}>Happy</option>
+  <option value="Sad" {{#compare this.user.Mood "Sad"}}selected{{/compare}}>Sad</option>
+  <option value="Angry" {{#compare this.user.Mood "Angry"}}selected{{/compare}}>Angry</option>
+  <option value="Excited" {{#compare this.user.Mood "Excited"}}selected{{/compare}}>Excited</option>
+  <option value="Anxious" {{#compare this.user.Mood "Anxious"}}selected{{/compare}}>Anxious</option>
+  <option value="Relaxed" {{#compare this.user.Mood "Relaxed"}}selected{{/compare}}>Relaxed</option>
+  <option value="Grateful" {{#compare this.user.Mood "Grateful"}}selected{{/compare}}>Grateful</option>
+</select>
+</form>
   </div>
 </div>
 <div class="movies-container">
@@ -50,7 +51,9 @@
 </div>
 <script>
   document.getElementById("moodSelect").addEventListener("change", function() {
-  document.getElementById("moodFilterForm").submit(); });
+    const selectedMood = this.value; 
+    const moodInput = document.querySelector('input[name="mood"]').value = selectedMood; 
+    document.getElementById("moodFilterForm").submit(); });
   document.getElementById('upcomingMovies').addEventListener('change', function() {
-  document.getElementById("upcomingMoviesForm").submit(); });
+    document.getElementById("upcomingMoviesForm").submit(); });
 </script>

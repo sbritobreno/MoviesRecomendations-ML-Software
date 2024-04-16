@@ -1,11 +1,17 @@
-const req = require("express/lib/request");
+const fs = require("fs");
+const path = require("path");
 const { getAllMovies } = require("../models/Movie");
 const { getUser } = require("../models/User");
 
 module.exports = class MoviesController {
   static async showRecomendedMovies(req, res) {
-    const user = getUser(req.session.userid);
+    const userId = req.session.userid;
+    let user = getUser(userId);
     const movies = getAllMovies();
+
+    if (req.query.mood && user && req.query.mood[0] != user.Mood) {
+      user = await updateUserMood(user.Id, req.query.mood[0]);
+    }
 
     let upcomingMovies = false;
     if (req.query.upcomingMovies) {
@@ -15,8 +21,6 @@ module.exports = class MoviesController {
     const moviesData = upcomingMovies
       ? movies.filter((m) => m.Year == 2025)
       : movies.filter((m) => m.Year != 2025);
-
-    // call function to return the recommended movies from the ml_model
 
     res.render("movies/foryou", { moviesData, user, upcomingMovies });
   }
@@ -79,7 +83,6 @@ module.exports = class MoviesController {
     const movieId = req.params.movie;
     const movies = getAllMovies();
     const movie = movies.find((el) => el.Id === movieId);
-    console.log(movie);
 
     if (movie.Year == 2025) {
       req.flash("message", "This Movie was not released yet!");
@@ -91,7 +94,32 @@ module.exports = class MoviesController {
     req.session.save(() => {
       res.redirect("/");
     });
-
-    async function updateUserData(movieId) {}
   }
 };
+
+async function updateUserData(movieId) {}
+
+async function updateUserMood(userId, newMood) {
+  try {
+    const data = await fs.promises.readFile(
+      path.join(__dirname, "..", "data", "users.json"),
+      "utf8"
+    );
+    const users = JSON.parse(data);
+    const updatedUsers = users.map((user) => {
+      if (user.Id == userId) {
+        user.Mood = newMood;
+      }
+      return user;
+    });
+    await fs.promises.writeFile(
+      path.join(__dirname, "..", "data", "users.json"),
+      JSON.stringify(updatedUsers, null, 2)
+    );
+
+    const updatedUser = updatedUsers.find((user) => user.Id === userId);
+    return updatedUser;
+  } catch (error) {
+    throw error; 
+  }
+}
