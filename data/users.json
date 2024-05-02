@@ -4,8 +4,17 @@
     "Name": "Breno Brito",
     "Username": "BBrito",
     "Password": "1234",
-    "Mood": "Relaxed",
-    "MoviesWatched": [1, 3, 4, 10, 16, 122, 136, 149, 38]
+    "Mood": "Sad",
+    "MoviesWatched": [
+      1,
+      3,
+      4,
+      10,
+      16,
+      122,
+      136,
+      149
+    ]
   },
   {
     "Id": 2,

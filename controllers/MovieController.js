@@ -1,13 +1,14 @@
 const fs = require("fs");
 const path = require("path");
+const { spawn } = require("child_process");
 const { getAllMovies } = require("../models/Movie");
 const { getUser } = require("../models/User");
+
 
 module.exports = class MoviesController {
   static async showRecomendedMovies(req, res) {
     const userId = req.session.userid;
     let user = getUser(userId);
-    const movies = getAllMovies();
 
     if (req.query.mood && user && req.query.mood[0] != user.Mood) {
       user = await updateUserMood(user.Id, req.query.mood[0]);
@@ -15,14 +16,57 @@ module.exports = class MoviesController {
 
     let upcomingMovies = false;
     if (req.query.upcomingMovies) {
-      upcomingMovies = req.query.upcomingMovies;
+      upcomingMovies = req.query.upcomingMovies == 'on' ? true : false;
     }
+    console.log(upcomingMovies)
 
-    const moviesData = upcomingMovies
-      ? movies.filter((m) => m.Year == 2014)
-      : movies.filter((m) => m.Year != 2014);
+    // Define Python script arguments
+    const args = [JSON.stringify(user), upcomingMovies.toString()];
 
-    res.render("movies/foryou", { moviesData, user, upcomingMovies });
+    // Spawn a child process to execute the Python script
+    const pythonProcess = spawn("python", ["./ML-Model/ml-model.py", ...args]);
+
+    // Listen for output from the Python script
+    pythonProcess.stdout.on("data", (data) => {
+      try {
+        const recommendedMovies = data
+          .toString()
+          .split("\n")
+          .filter((entry) => entry.trim() !== "") // Filter out empty entries
+          .map((entry) => {
+            const [movie, genre, year, rate, compositeScore, id] =
+              entry.split(/\s{2,}/);
+            return {
+              Movie: movie.trim(),
+              Genre: genre.trim(),
+              Year: parseInt(year.trim()),
+              Rate: parseInt(rate.trim()),
+              CompositeScore: parseFloat(compositeScore.trim()),
+              Id: parseInt(id.trim()),
+            };
+          });
+
+        res.render("movies/foryou", {
+          moviesData: recommendedMovies,
+          user,
+          upcomingMovies,
+        });
+      } catch (error) {
+        console.error("Error parsing recommended movies data:", error);
+        console.error("Data received from Python process:", data.toString());
+      }
+    });
+
+    // Listen for errors from the Python script
+    pythonProcess.stderr.on("data", (data) => {
+      console.error(`Error executing Python script: ${data}`);
+      res.status(500).send("Error executing Python script");
+    });
+
+    // Handle process exit
+    pythonProcess.on("close", (code) => {
+      console.log(`Python script exited with code ${code}`);
+    });
   }
 
   static async showMovies(req, res) {
@@ -111,12 +155,6 @@ async function updateUserData(userId, movie) {
     const users = JSON.parse(data);
     const updatedUsers = users.map((user) => {
       if (user.Id == userId) {
-        user[movie.Genre]++;
-        user.TotalMoviesWatched++;
-        user.AverageYear = Math.floor((user.AverageYear + movie.Year * 1) / 2);
-        user.AverageRate = Math.floor(
-          (user.AverageRate + movie.AudienceScore * 1) / 2
-        );
         user.MoviesWatched.push(movie.Id * 1);
       }
       return user;
