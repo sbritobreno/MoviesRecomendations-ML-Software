@@ -4,7 +4,6 @@ const { spawn } = require("child_process");
 const { getAllMovies } = require("../models/Movie");
 const { getUser } = require("../models/User");
 
-
 module.exports = class MoviesController {
   static async showRecomendedMovies(req, res) {
     const userId = req.session.userid;
@@ -16,9 +15,8 @@ module.exports = class MoviesController {
 
     let upcomingMovies = false;
     if (req.query.upcomingMovies) {
-      upcomingMovies = req.query.upcomingMovies == 'on' ? true : false;
+      upcomingMovies = req.query.upcomingMovies == "on" ? true : false;
     }
-    console.log(upcomingMovies)
 
     // Define Python script arguments
     const args = [JSON.stringify(user), upcomingMovies.toString()];
@@ -32,7 +30,7 @@ module.exports = class MoviesController {
         const recommendedMovies = data
           .toString()
           .split("\n")
-          .filter((entry) => entry.trim() !== "") // Filter out empty entries
+          .filter((entry) => entry.trim() !== "")
           .map((entry) => {
             const [movie, genre, year, rate, compositeScore, id] =
               entry.split(/\s{2,}/);
@@ -151,7 +149,6 @@ async function updateUserData(userId, movie) {
       path.join(__dirname, "..", "data", "users.json"),
       "utf8"
     );
-    console.log(movie);
     const users = JSON.parse(data);
     const updatedUsers = users.map((user) => {
       if (user.Id == userId) {
@@ -159,6 +156,7 @@ async function updateUserData(userId, movie) {
       }
       return user;
     });
+
     await fs.promises.writeFile(
       path.join(__dirname, "..", "data", "users.json"),
       JSON.stringify(updatedUsers, null, 2)

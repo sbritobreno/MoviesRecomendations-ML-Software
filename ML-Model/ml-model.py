@@ -35,7 +35,7 @@ mood_genre_associations = {
     "Grateful": ["Musical", "Biography", "Romance"]
 }
 
-# Updated weights
+# Recomendation weights
 weights = {
     "Mood": 0.3,
     "MovieGenre": 0.3,
@@ -48,7 +48,6 @@ movies_df_encoded = pd.get_dummies(movies_df, columns=['Genre'])
 
 # Recommendation Generation
 def recommend_movies_for_user(user_data, upcoming_movies):
-    # Calculate composite scores for all movies
     composite_scores = []
 
     # Filter movies released or not depending on upcoming_movies variable
@@ -80,11 +79,10 @@ def recommend_movies_for_user(user_data, upcoming_movies):
             else:
                 genre_percentages[genre] = movie_genres[genre].values[0]
 
-    # Calculate genre percentages
     for genre, count in genre_percentages.items():
         genre_percentages[genre] = count / total_movies_watched
 
-
+    # Calculate composite scores for each movies
     for index, movie_data in movies_df_encoded_filtered.iterrows():
         composite_score = 0
 
@@ -132,3 +130,5 @@ for index, row in recommended_movies.iterrows():
     print(f"{row['Movie']:40} {genre_columns[0]:15} {row['Year']:10} {row['AudienceScore']:5} {row['CompositeScore']:20} {row['Id']:5}")
 
 
+
+# %%
